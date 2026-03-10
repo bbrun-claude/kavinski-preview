@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavinski et Fils — Maçonnerie générale à Tournon-Saint-Martin (36)</title>
+<meta name="description" content="Kavinski et Fils, entreprise de maçonnerie générale à Sançais, Tournon-Saint-Martin (36). Construction neuve, rénovation, gros œuvre. Qualibat. Depuis 1981. Devis gratuit au 02 54 37 32 86.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#003D8F;--blue-light:#4A8FE7;--blue-dark:#002B66;--gold:#D4A843;--dark:#1a1a1a;--gray:#555;--light:#F4F6F9;--white:#fff}
+body{font-family:'Open Sans',sans-serif;color:var(--dark);line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{color:var(--blue-dark)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);box-shadow:0 2px 12px rgba(0,0,0,0.08);transition:all .3s}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav-logo{height:52px}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.9rem;color:var(--dark);text-transform:uppercase;letter-spacing:.5px;transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{background:var(--blue);color:var(--white)!important;padding:10px 22px;border-radius:6px;font-size:.85rem}
+.nav-cta:hover{background:var(--blue-dark);color:var(--white)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.burger span{width:26px;height:3px;background:var(--dark);border-radius:2px;transition:.3s}
+
+/* HERO */
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;margin-top:70px}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.5)}
+.hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:60px 24px;color:var(--white)}
+.hero h1{font-family:'Montserrat',sans-serif;font-size:3rem;font-weight:800;line-height:1.15;margin-bottom:16px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.hero h1 span{color:var(--blue-light)}
+.hero p{font-size:1.15rem;max-width:560px;margin-bottom:32px;opacity:.92;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.hero-badges{display:flex;gap:14px;align-items:center;margin-bottom:28px;flex-wrap:wrap}
+.hero-badge{background:rgba(255,255,255,.15);backdrop-filter:blur(6px);padding:10px 18px;border-radius:8px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.85rem;border:1px solid rgba(255,255,255,.2)}
+.btn{display:inline-block;padding:14px 32px;border-radius:8px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;transition:all .3s;cursor:pointer;border:none}
+.btn-primary{background:var(--blue);color:var(--white)}
+.btn-primary:hover{background:var(--blue-dark);color:var(--white);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,61,143,.35)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid var(--white);margin-left:12px}
+.btn-outline:hover{background:var(--white);color:var(--dark)}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* SECTIONS */
+section{padding:80px 24px}
+.section-title{font-family:'Montserrat',sans-serif;font-size:2.2rem;font-weight:700;text-align:center;margin-bottom:12px}
+.section-sub{text-align:center;color:var(--gray);max-width:600px;margin:0 auto 48px;font-size:1.05rem}
+.section-title::after{content:'';display:block;width:60px;height:4px;background:var(--blue);margin:12px auto 0;border-radius:2px}
+
+/* SERVICES */
+.services{background:var(--light)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;max-width:1100px;margin:0 auto}
+.service-card{background:var(--white);border-radius:12px;padding:32px 28px;box-shadow:0 4px 16px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s;border-top:4px solid var(--blue)}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.1)}
+.service-icon{font-size:2.2rem;margin-bottom:16px}
+.service-card h3{font-family:'Montserrat',sans-serif;font-size:1.15rem;margin-bottom:10px;color:var(--dark)}
+.service-card p{color:var(--gray);font-size:.95rem;line-height:1.6}
+
+/* REALISATIONS */
+.realisations-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.real-card{border-radius:12px;overflow:hidden;position:relative;aspect-ratio:4/3;cursor:pointer}
+.real-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.real-card:hover img{transform:scale(1.05)}
+.real-card .overlay{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:var(--white);font-family:'Montserrat',sans-serif;font-weight:600;font-size:.95rem;opacity:0;transition:opacity .3s}
+.real-card:hover .overlay{opacity:1}
+
+/* ABOUT */
+.about{background:var(--light)}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1100px;margin:0 auto;align-items:center}
+.about-img{border-radius:12px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-text h2{font-family:'Montserrat',sans-serif;font-size:2rem;margin-bottom:16px}
+.about-text h2::after{content:'';display:block;width:50px;height:4px;background:var(--blue);margin-top:10px;border-radius:2px}
+.about-text p{color:var(--gray);margin-bottom:16px;font-size:1rem}
+.about-stats{display:flex;gap:32px;margin-top:24px}
+.stat{text-align:center}
+.stat-num{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:700;color:var(--blue)}
+.stat-label{font-size:.85rem;color:var(--gray)}
+
+/* QUALIBAT */
+.badge-section{text-align:center;padding:40px 24px;background:var(--white)}
+.badge-row{display:flex;justify-content:center;gap:40px;align-items:center;flex-wrap:wrap}
+.badge-item{text-align:center;font-family:'Montserrat',sans-serif;font-size:.85rem;color:var(--gray)}
+.badge-item strong{display:block;font-size:1.6rem;color:var(--blue);margin-bottom:4px}
+
+/* CONTACT */
+.contact{background:var(--dark);color:var(--white)}
+.contact .section-title{color:var(--white)}
+.contact .section-sub{color:rgba(255,255,255,.7)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;max-width:1000px;margin:0 auto}
+.contact-card{text-align:center;padding:32px 20px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.contact-card .icon{font-size:2rem;margin-bottom:12px}
+.contact-card h3{font-family:'Montserrat',sans-serif;font-size:1rem;margin-bottom:8px;color:var(--blue-light)}
+.contact-card p{color:rgba(255,255,255,.8);font-size:.95rem}
+.contact-card a{color:var(--blue-light)}
+.contact-card a:hover{color:var(--gold)}
+.map{width:100%;height:300px;border:none;border-radius:12px;margin-top:40px;max-width:1000px;display:block;margin-left:auto;margin-right:auto}
+
+/* FOOTER */
+footer{background:#111;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.85rem}
+footer a{color:var(--blue-light)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--white);flex-direction:column;padding:20px;gap:16px;box-shadow:0 8px 20px rgba(0,0,0,.1)}
+  .nav-links.open{display:flex}
+  .burger{display:flex}
+  .hero h1{font-size:2rem}
+  .hero p{font-size:1rem}
+  .hero-badges{flex-direction:column;align-items:flex-start}
+  .hero-btns{flex-direction:column}
+  .btn-outline{margin-left:0}
+  .about-wrap{grid-template-columns:1fr;gap:24px}
+  .contact-grid{grid-template-columns:1fr}
+  .realisations-grid{grid-template-columns:1fr}
+  .about-stats{flex-wrap:wrap;gap:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <img src="img/logo.jpg" alt="Kavinski et Fils" class="nav-logo">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Prestations</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#apropos">L'entreprise</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="burger" id="burger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('img/web_maison1.jpg')"></div>
+  <div class="hero-content">
+    <div class="hero-badges">
+      <span class="hero-badge">Qualibat</span>
+      <span class="hero-badge">Depuis 1981</span>
+      <span class="hero-badge">Garantie décennale</span>
+    </div>
+    <h1>Maçonnerie générale<br>dans l'<span>Indre</span></h1>
+    <p>Construction neuve, rénovation et gros œuvre. Plus de 40 ans de savoir-faire artisanal au service de vos projets à Tournon-Saint-Martin et dans toute la Brenne.</p>
+    <div class="hero-btns">
+      <a href="tel:0254373286" class="btn btn-primary">02 54 37 32 86</a>
+      <a href="#contact" class="btn btn-outline">Devis gratuit</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <h2 class="section-title">Nos prestations</h2>
+  <p class="section-sub">Kavinski et Fils intervient sur tous vos travaux de maçonnerie, de la construction neuve à la rénovation complète.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">&#x1F3D7;</div>
+      <h3>Construction neuve</h3>
+      <p>Maisons individuelles, bâtiments agricoles, dépendances. Gros œuvre complet : fondations, élévation de murs, dalles et planchers.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F3E0;</div>
+      <h3>Rénovation</h3>
+      <p>Rénovation intérieure et extérieure, reprise de maçonnerie, ouvertures, agrandissements. Respect du bâti existant.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F9F1;</div>
+      <h3>Gros œuvre</h3>
+      <p>Fondations, murs porteurs, planchers, charpente béton. L'ossature solide de votre projet, du terrassement à la mise hors d'eau.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F6E1;</div>
+      <h3>Aménagements extérieurs</h3>
+      <p>Terrasses, allées, murets, barbecues en pierre, clôtures et portails. Des espaces extérieurs sur mesure.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x2699;</div>
+      <h3>Enduits et façades</h3>
+      <p>Enduits traditionnels et monocouches, ravalement de façade, joints de pierre. Finitions soignées pour un rendu impeccable.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F3A8;</div>
+      <h3>Second œuvre</h3>
+      <p>Carrelage, chapes, plâtrerie, cloisons. Coordination complète de votre chantier du gros œuvre aux finitions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REALISATIONS -->
+<section id="realisations">
+  <h2 class="section-title">Nos réalisations</h2>
+  <p class="section-sub">Un aperçu de nos chantiers dans l'Indre et le sud du Berry.</p>
+  <div class="realisations-grid">
+    <div class="real-card">
+      <img src="img/web_barbecue.jpg" alt="Construction barbecue en pierre" loading="lazy">
+      <div class="overlay">Barbecue en pierre</div>
+    </div>
+    <div class="real-card">
+      <img src="img/web_renov1.jpg" alt="Rénovation bâtiment" loading="lazy">
+      <div class="overlay">Rénovation complète</div>
+    </div>
+    <div class="real-card">
+      <img src="img/web_neuf1.jpg" alt="Construction neuve" loading="lazy">
+      <div class="overlay">Construction neuve</div>
+    </div>
+    <div class="real-card">
+      <img src="img/web_renov2.jpg" alt="Chantier rénovation" loading="lazy">
+      <div class="overlay">Rénovation de bâtiment</div>
+    </div>
+    <div class="real-card">
+      <img src="img/web_chantier1.jpg" alt="Chantier en cours" loading="lazy">
+      <div class="overlay">Chantier gros œuvre</div>
+    </div>
+    <div class="real-card">
+      <img src="img/web_neuf2.jpg" alt="Travaux neufs" loading="lazy">
+      <div class="overlay">Travaux neufs</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="apropos">
+  <div class="about-wrap">
+    <div class="about-img">
+      <img src="img/web_renov3.jpg" alt="Kavinski et Fils - maçonnerie générale">
+    </div>
+    <div class="about-text">
+      <h2>Kavinski et Fils</h2>
+      <p>Fondée en 1981 à Sançais, l'entreprise Kavinski et Fils est spécialisée dans la maçonnerie générale et le gros œuvre de bâtiment. Depuis plus de quatre décennies, nous mettons notre expérience au service des particuliers et des professionnels de l'Indre.</p>
+      <p>Certifiée Qualibat et couverte par la garantie décennale, notre équipe intervient sur des chantiers de construction neuve comme de rénovation, avec le souci permanent de la qualité et du respect des délais.</p>
+      <p>Nous intervenons à Tournon-Saint-Martin et dans tout le sud de l'Indre : Le Blanc, Châtillon-sur-Indre, Buzançais, Argenton-sur-Creuse et les communes environnantes.</p>
+      <div class="about-stats">
+        <div class="stat"><div class="stat-num">1981</div><div class="stat-label">Création</div></div>
+        <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Années d'expérience</div></div>
+        <div class="stat"><div class="stat-num">36</div><div class="stat-label">Indre</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BADGES -->
+<div class="badge-section">
+  <div class="badge-row">
+    <div class="badge-item"><strong>Qualibat</strong>Entreprise qualifiée</div>
+    <div class="badge-item"><strong>1981</strong>Depuis plus de 40 ans</div>
+    <div class="badge-item"><strong>Décennale</strong>Garantie assurée</div>
+    <div class="badge-item"><strong>10-19</strong>Collaborateurs</div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Contactez-nous</h2>
+  <p class="section-sub">Devis gratuit et sans engagement. Nous intervenons dans toute la Brenne et le sud de l'Indre.</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="icon">&#x1F4DE;</div>
+      <h3>Téléphone</h3>
+      <p><a href="tel:0254373286">02 54 37 32 86</a></p>
+    </div>
+    <div class="contact-card">
+      <div class="icon">&#x2709;</div>
+      <h3>Email</h3>
+      <p><a href="mailto:ent.kavinski@gmail.com">ent.kavinski@gmail.com</a></p>
+    </div>
+    <div class="contact-card">
+      <div class="icon">&#x1F4CD;</div>
+      <h3>Adresse</h3>
+      <p>Sançais<br>36220 Tournon-Saint-Martin</p>
+    </div>
+  </div>
+  <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10000!2d0.953!3d46.733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fce6b8ef4a3749%3A0x40d9289817394690!2sSan%C3%A7ais%2C+36220+Tournon-Saint-Martin!5e0!3m2!1sfr!2sfr" allowfullscreen loading="lazy" title="Kavinski et Fils - Sançais"></iframe>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 Kavinski et Fils — Maçonnerie générale à Tournon-Saint-Martin (36) — SIRET 322 959 768 00035</p>
+  <p>Site réalisé par <a href="https://claudeb-studio.vercel.app" target="_blank">Claude B. Studio</a></p>
+</footer>
+
+</body>
+</html>
